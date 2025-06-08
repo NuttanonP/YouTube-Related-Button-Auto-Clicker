@@ -1,5 +1,4 @@
-# 📺 YouTube Related Button Clicker – Chrome Extension
-
+# Chrome Extension - 📺 YouTube Related Button Clicker
 > **Bringing back the YouTube we remember.**
 
 ---
@@ -25,6 +24,7 @@ This lightweight Chrome extension forces YouTube to **automatically switch to th
 2. Go to `chrome://extensions/`
 3. Enable **Developer Mode**
 4. Click **"Load unpacked"** and select the extension folder
+
 ![image](https://github.com/user-attachments/assets/1cc09644-785e-46d0-9835-f14f82d4ea93)
 
 
