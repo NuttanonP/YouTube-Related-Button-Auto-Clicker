@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/96106246-bac0-4f08-aac1-c6dd603f6109)
 # 📺 YouTube Related Button Clicker – Chrome Extension
 
 > **Bringing back the YouTube we remember.**
