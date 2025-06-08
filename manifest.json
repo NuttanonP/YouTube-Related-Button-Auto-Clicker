@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Related Button Auto Clicker",
+  "version": "1.0",
+  "description": "Automatically clicks the Related tab on YouTube videos to force youtube using content based recommendation.",
+  "author": "Kirika Arrists",
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "action": {
+    "default_title": "YouTube Related Button Auto Clicker"
+  }
+}
