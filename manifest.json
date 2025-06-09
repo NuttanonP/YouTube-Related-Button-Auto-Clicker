@@ -2,11 +2,11 @@
   "manifest_version": 3,
   "name": "YouTube Related Button Auto Clicker",
   "version": "1.0",
-  "description": "Automatically clicks the Related tab on YouTube videos to force youtube using content based recommendation.",
-  "author": "NuttanonP",
+  "description": "Automatically clicks the Related tab on YouTube videos to force youtube stop auto recommend video using past experiences and prefences. This extension is for the people want to EXPLORE youtube base the content you are watching now.",
+  "author": "Nuttanon Prabaripay",
   "content_scripts": [
     {
-      "matches": ["*://www.youtube.com/watch*"],
+      "matches": ["*://www.youtube.com/*"],
       "js": ["content.js"],
       "run_at": "document_idle"
     }

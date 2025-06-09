@@ -1,5 +1,5 @@
 function debugPrint(str) {
-  isDebug = false; // Set to true to enable debug messages
+  isDebug = true; // Set to true to enable debug messages
   if (isDebug) {
     console.log(`${str}`);
   }
@@ -21,8 +21,9 @@ function findAndClickRelatedButton(via= "Unknown") {
         debugPrint(`🎯 Clicked "Related" button via "${via}"`);
         return;
       }
-      else {
-        debugPrint(`ℹ️ "Related" button can't be clicked via "${via}"`);
+      else if (button.hasAttribute("aria-selected") && button.getAttribute("aria-selected") === "true") {
+        debugPrint(`ℹ️ "Related" button already clicked via "${via}"`);
+        return;
       }
     }
   }
@@ -51,7 +52,7 @@ function monitorURLChange() {
       } 
       else {
 
-        debugPrint("❌ Not a YouTube video page");
+        debugPrint("❌ Not a YouTube video page via monitorURLChange");
 
         // Disconnect this observer if not a YouTube video page
         obs.disconnect();
@@ -67,7 +68,7 @@ function monitorURLChange() {
 // Loaded Msg
 debugPrint("📦 YouTube Related Button Clicker initialized");
 let lastUrl = location.href;
-const waitMiliseconds = 1500;
+const waitMiliseconds = 2000;
 
 // Start script after a short delay on page load
 window.addEventListener("load", () => {
@@ -79,7 +80,7 @@ window.addEventListener("load", () => {
     }, waitMiliseconds);
   }
   else {
-    debugPrint("❌ Not a YouTube video page");
+    debugPrint("❌ Not a YouTube video page via Init");
   }
 });
 
